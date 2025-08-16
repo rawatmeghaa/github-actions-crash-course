@@ -1,0 +1,31 @@
+name: CICD pipeline for react app
+
+on:
+  push:
+    branches: [main]
+  workflows_dispatch
+
+permission: 
+  contents: write
+
+jobs:
+  build_and_deploy:
+     runs_on: ubuntu:latest
+    
+     steps:
+       - name: checkout_repository
+         uses: actions/checkout@v3
+       - name: setup_nodejs
+         uses: actions/setup-node@v3
+         with:
+           node-version: 18
+       - name: Install dependancies
+         run: npm install
+       - name: Build project
+         run: npm run build
+       - name: dpeloy project
+         run: JamesIves/github-pages-deploy-action@4.1.0
+
+         with:
+           branch: gh-pages
+           folder: build
