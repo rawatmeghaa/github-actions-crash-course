@@ -24,7 +24,7 @@ jobs:
       - name: Build project
         run: npm run build
         env:
-          React_app: ${{vars.React_app}}
+          REACT_APP: ${{vars.REACT_APP}}
       - name: deploy project
         uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
