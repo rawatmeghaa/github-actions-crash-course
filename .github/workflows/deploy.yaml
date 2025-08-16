@@ -3,7 +3,7 @@ name: CICD pipeline for react app
 on:
   push:
     branches: [main]
-  workflows_dispatch
+  workflow_dispatch
 
 permission: 
   contents: write
