@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: gautamkrishnar/blog-post-workflow@master
+      - uses: gautamkrishnar/blog-post-workflow@v1
         with:
           comment_tag_name: "YOUTUBE"
-          feed_list: https://www.youtube.com/feeds/videos.xml?channel_id=UC8NDpwTbsFSeP7dkbl4hKeQ
+          feed_list: "https://www.youtube.com/feeds/videos.xml?channel_id=UC8NDpwTbsFSeP7dkbl4hKeQ"
 
   
